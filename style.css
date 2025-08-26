@@ -1,0 +1,241 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #F2F9ED;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+main{
+    padding: 0 16px;
+}
+.heading{
+    color: #48A300;
+    font-size : 64px;
+    text-align: center;
+}
+.container{
+    background-color: #fbfbfb;
+    width: 660px;
+    margin-inline: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+    padding: 32px 48px;
+}
+
+
+
+.heading span{
+    color: #61481C;
+}
+.title: {
+    font-size: 32px;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    display: flex;
+
+}
+.sub-title{
+    font-size: 14px;
+    color: #858585;
+    margin: 10px 0;
+}
+.img-sun{
+    vertical-align: middle;
+    width: 50px;
+    margin-left: 10px;
+    height: auto;
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+.sun-wrapper{
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+}
+
+.ellipse {
+  position: absolute;
+    width: 5px;
+    height: 5px;
+ 
+}
+
+/* Position each ellipse differently */
+.ellipse1 {
+  top: 19px;
+  left: 28px;
+}
+
+.ellipse2 {
+  bottom: 17px;
+  left: 32px;
+
+}
+
+.ellipse3 {
+  top: 19px;
+  right: 8px;
+}
+
+.img-sun:hover{
+    -webkit-transform: rotate(360deg);
+}
+
+//use keyframes
+@-webkit-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes spin{
+       100%{-webkit-transform: rotate(360deg);}
+
+}
+@keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+
+}
+.progress{
+    height: 30px;
+    background-color: #b2cc9cff;
+    border-radius: 15px;
+    margin-bottom: 18px;
+}
+.progress-bar{
+    height: 100%;
+    border-radius: 15px;
+    background-color: #48A300;
+   
+    font-size: 20px;
+    color: #eeffe0;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 10px;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.25s ease-in-out;
+}
+
+.progress-bar span{
+     padding-left: 20px;
+}
+
+
+
+.error{
+    fonst-size: 12px;
+    font-weight: 400;
+    color: red;
+    margin-top: 4px;
+    display: none;
+}
+
+
+.show-error .error{
+    display: block;
+}
+
+.goal-container{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    height: 82px;
+    border: 1px solid #D9D9D9;
+    border-radius: 17px;
+    padding: 0 22px;
+    margin: 42px 0; ;
+    background-color: #FFFFFF;
+}
+
+.custom-checkbox{
+    height: 24px;
+    width:24px;
+    border-radius: 50%;
+    border: 2px solid #61481C4D;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.check-icon{
+    display: none;
+}
+
+.goal-input{
+    margin-left: 10px;
+    outline: none;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    width: 100%;
+    align-self: stretch;
+    font-family: 'Poppins', sans-serif;
+}
+
+.goal-input::placeholder{
+    color:#D9D9D9;
+}
+
+.quote{
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.last{
+    font-weight: 500;
+    font-size: 10px;
+    color: #858585;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.completed .custom-checkbox{
+    background-color: #48A300;
+    border-color: #48A300;
+}
+
+.completed .check-icon{
+    display: block;
+    
+}
+
+.completed .goal-input{
+    color: #48A300;
+    text-decoration: line-through;
+}
+
+@media (max-width: 768px) {
+   .title{
+    font-size: 24px;
+   } 
+   .container{
+        padding: 16px 32px;
+   }
+   
+   .heading {
+        font-size: 32px;
+   }
+   .goal-container{
+        height:64px;
+        margin-bottom: 24px;
+        border-radius: 12px;
+   }
+   .custom-checkbox{
+        height: 20px;
+        width:20px;
+   }
+   .last{
+        margin-top: 32px;
+   }
+   /* .progress-bar{
+        height: 24px;
+   } */
+}
+
+
